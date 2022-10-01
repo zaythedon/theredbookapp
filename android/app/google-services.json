@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "213750546726",
+    "project_id": "theredbookapp",
+    "storage_bucket": "theredbookapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213750546726:android:e6b092b7ef54a0673ac1e7",
+        "android_client_info": {
+          "package_name": "com.example.theredbookapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213750546726-f0fjir02r010v2b6dqt2bumloi3vg2ak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7iUwoynqtw27Okf6t-6Ms8i54lC6zizM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213750546726-f0fjir02r010v2b6dqt2bumloi3vg2ak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
