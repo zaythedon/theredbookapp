@@ -9,10 +9,17 @@ class screen1 extends StatefulWidget {
 }
 
 class _screen1State extends State<screen1> {
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-
+    return Scaffold(
+        body: Center(
+            child: Text("signed in")
+         ),
     );
   }
 }
