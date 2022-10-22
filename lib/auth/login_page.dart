@@ -9,7 +9,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  final VoidCallback showRegisterpage;
+  const LoginPage({Key? key, required this.showRegisterpage}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -189,16 +190,19 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
                SizedBox(width:5),
-                Text(
-                "REGISTER",
-                style: GoogleFonts.bebasNeue(
-                    textStyle: TextStyle(
-                      color: Colors.redAccent,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
-                ),
+                GestureDetector(
+                  onTap: widget.showRegisterpage,
+                  child: Text(
+                  "REGISTER",
+                  style: GoogleFonts.bebasNeue(
+                      textStyle: TextStyle(
+                        color: Colors.redAccent,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                  ),
               ),
+                ),
             ],
             ),
 

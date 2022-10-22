@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:theredbookapp/auth/Signup.dart';
 import 'package:theredbookapp/auth/login_page.dart';
+import 'package:theredbookapp/screens/HomePage.dart';
 import 'package:theredbookapp/screens/screen1.dart';
 
 class main_page extends StatefulWidget {
@@ -18,11 +20,11 @@ class _main_pageState extends State<main_page> {
       builder: (context, snapshot) {
         if(snapshot.hasData)
           {
-            return screen1();
+            return Homepage();
           }
         else
           {
-            return LoginPage();
+            return Signup();
           }
       }),
       );
