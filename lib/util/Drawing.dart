@@ -11,23 +11,20 @@ class Drawing extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => {FirebaseAuth.instance.signOut()},
-      child: Row(
+    return Row(
   children: [
-      Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: icon,
-      ),
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: icon,
+    ),
 
-      Expanded(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(label, style: GoogleFonts.roboto(textStyle: TextStyle(color: Colors.redAccent)),),
-        ),
+    Expanded(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(label, style: GoogleFonts.roboto(textStyle: TextStyle(color: Colors.redAccent)),),
       ),
+    ),
   ],
-      ),
     );
   }
 }

@@ -19,10 +19,10 @@ class PostWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(6.0),
           child: ClipRRect(
             borderRadius: BorderRadius.all(Radius.circular(200)),
-            child: Image.network(image, width: 60,),
+            child: Image.network(image, width: 40,),
             ),
         ),
         Expanded(
@@ -34,20 +34,29 @@ class PostWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text(account, style: GoogleFonts.bebasNeue(textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),),
+                    Text(account, style: GoogleFonts.bebasNeue(textStyle: TextStyle( color: Colors.redAccent, fontWeight: FontWeight.bold, fontSize: 22)),),
                     Padding(
                       padding: const EdgeInsets.only(left:10),
-                        child: Text(name , style: GoogleFonts.roboto(textStyle: TextStyle(fontWeight: FontWeight.w300, fontSize: 15)),),),
+                        child: Text(name , style: GoogleFonts.roboto(textStyle: TextStyle(fontWeight: FontWeight.w300, fontSize: 10)),),),
                   ],
                 ),
-                Text(description),
+
+                SizedBox(height: 10,),
+
+                Text(description, style: GoogleFonts.roboto(textStyle: TextStyle(fontSize: 20))),
+
+                SizedBox(height: 10,),
+
                 ClipRRect(
                     child: Image.network(media, height: 200,)
                 ),
-                Text(rating),
+
+                SizedBox(height: 10,),
+
+                Text("Rating: "+rating, style: GoogleFonts.roboto(textStyle: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.w500, fontSize: 15))),
               ],
             ),
           ),

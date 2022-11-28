@@ -21,7 +21,7 @@ class _RedbookState extends State<Redbook> {
               account:"AK7761",
               description: "this is a great work place and i am enojying it here",
               media: "https://static.dezeen.com/uploads/2016/03/google-tel-aviv-office-interior-_dezeen_ban.jpg",
-              rating: "Rating: 5"
+              rating: "5"
           ),
             Divider(),
             PostWidget(
@@ -30,7 +30,7 @@ class _RedbookState extends State<Redbook> {
                 account:"AK7761",
                 description: "this is a great work place and i am enojying it here",
                 media: "https://static.dezeen.com/uploads/2016/03/google-tel-aviv-office-interior-_dezeen_ban.jpg",
-                rating: "Rating: 5"
+                rating: "5"
             ),
             Divider(),
             PostWidget(
@@ -39,7 +39,7 @@ class _RedbookState extends State<Redbook> {
                 account:"AK7761",
                 description: "this is a great work place and i am enojying it here",
                 media: "https://static.dezeen.com/uploads/2016/03/google-tel-aviv-office-interior-_dezeen_ban.jpg",
-                rating: "Rating: 5"
+                rating: "5"
             ),
             Divider(),
             PostWidget(
@@ -48,7 +48,7 @@ class _RedbookState extends State<Redbook> {
                 account:"AK7761",
                 description: "this is a great work place and i am enojying it here",
                 media: "https://static.dezeen.com/uploads/2016/03/google-tel-aviv-office-interior-_dezeen_ban.jpg",
-                rating: "Rating: 5"
+                rating: "5"
             ),
             Divider(),
             PostWidget(
@@ -57,7 +57,7 @@ class _RedbookState extends State<Redbook> {
                 account:"AK7761",
                 description: "this is a great work place and i am enojying it here",
                 media: "https://static.dezeen.com/uploads/2016/03/google-tel-aviv-office-interior-_dezeen_ban.jpg",
-                rating: "Rating: 5"
+                rating: "5"
             ),
             Divider(),
             PostWidget(
@@ -66,7 +66,7 @@ class _RedbookState extends State<Redbook> {
                 account:"AK7761",
                 description: "this is a great work place and i am enojying it here",
                 media: "https://static.dezeen.com/uploads/2016/03/google-tel-aviv-office-interior-_dezeen_ban.jpg",
-                rating: "Rating: 5"
+                rating: "5"
             ),
       ],
       ),

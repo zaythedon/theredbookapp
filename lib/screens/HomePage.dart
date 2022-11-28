@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:theredbookapp/screens/Redbook.dart';
+import 'package:theredbookapp/screens/Symposium.dart';
 import 'package:theredbookapp/util/RedBookDraw.dart';
 
 import '../util/Redbookheader.dart';
@@ -79,7 +80,13 @@ class _HomepageState extends State<Homepage> {
               label: " "
             ),
             BottomNavigationBarItem(
-                icon: current==1? Icon(Icons.style, color: Colors.redAccent,):Icon(Icons.style),
+                icon: current==1? GestureDetector(
+                  onTap:  () => {
+                    Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => Symposium()))},
+                  child: Icon(Icons.style, color: Colors.redAccent,),):GestureDetector(
+                  onTap:  () => {Symposium()},
+                  child: Icon(Icons.style, color: Colors.black,),),
                 label: ""
             ),
             BottomNavigationBarItem(
