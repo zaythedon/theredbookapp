@@ -74,13 +74,13 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 const SizedBox(width: 20.0, height: 100.0),
-                Text("HELLO", style:GoogleFonts.bebasNeue(textStyle:TextStyle(fontSize: 96, color: Colors.white))),
+                Text("HELLO", style:GoogleFonts.bebasNeue(textStyle:TextStyle(fontSize: 80, color: Colors.white))),
                 const SizedBox(width: 20.0, height: 110.0),
                 AnimatedTextKit(
                 animatedTexts: [
                 TyperAnimatedText(
                 'THERE !',
-                    textStyle : GoogleFonts.bebasNeue(textStyle:TextStyle(fontSize: 93, color: Colors.red, fontWeight: FontWeight.bold),),
+                    textStyle : GoogleFonts.bebasNeue(textStyle:TextStyle(fontSize: 80, color: Colors.red, fontWeight: FontWeight.bold),),
                     speed: const Duration(milliseconds: 200),
                 ),
                 ],

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:theredbookapp/screens/Redbook.dart';
 import 'package:theredbookapp/util/RedBookDraw.dart';
+import 'package:theredbookapp/screens/Profile.dart';
 
 import '../util/Redbookheader.dart';
 
@@ -35,7 +36,7 @@ class _HomepageState extends State<Homepage> {
                 padding: const EdgeInsets.all(8.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(200)),
-                  child: Image.network("https://media-exp1.licdn.com/dms/image/C4E03AQGb9fj3h6Ladg/profile-displayphoto-shrink_200_200/0/1662221411927?e=1668038400&v=beta&t=2sgn-TcK6sFs3dfUMmG-jF548w8qnaRxiTug8ejGNn0",
+                  child: Image.network("https://avatars.githubusercontent.com/u/54953858?v=4",
                   ),
                 ),
               ),
@@ -88,7 +89,8 @@ class _HomepageState extends State<Homepage> {
             ),
             BottomNavigationBarItem(
                 icon: current==3? Icon(Icons.person, color: Colors.redAccent,):Icon(Icons.person),
-                label: ""
+                label: "",
+
             ),
           ],
         ),
