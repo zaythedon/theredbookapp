@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:theredbookapp/auth/login_page.dart';
+import 'package:theredbookapp/main_page.dart';
 
 
 void main() {
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
               // builder: DevicePreview.appBuilder,
               theme: ThemeData.light(),
               darkTheme: ThemeData.dark(),
-              home: LoginPage(),
+              home: main_page(),
               debugShowCheckedModeBanner: false,
             );
           }

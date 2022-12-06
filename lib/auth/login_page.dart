@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,13 +9,30 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  final VoidCallback showRegisterpage;
+  const LoginPage({Key? key, required this.showRegisterpage}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
+
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  Future signIn() async{
+    await FirebaseAuth.instance.signInWithEmailAndPassword(email: _emailController.text.trim(), password: _passwordController.text.trim());
+  }
+  @override
+  void dispose()
+  {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,17 +46,17 @@ class _LoginPageState extends State<LoginPage> {
                 decoration: BoxDecoration(
                     image: DecorationImage(
 
-                        image: AssetImage('assets/images/login_BG_last1.jpg'),
+                        image: AssetImage('assets/images/loginBG1.jpg'),
                         fit: BoxFit.cover,
                         alignment: Alignment.centerLeft
                     )
                 ),
                 child: BackdropFilter(
                   filter: ImageFilter.blur(
-                      sigmaX: 2, sigmaY: 3
+                      sigmaX: 4, sigmaY: 5
                   ),
                   child: Container(
-                    color: Colors.black.withOpacity(.125),
+                    color: Colors.black.withOpacity(.150),
                   ),
                 ),),
 
@@ -50,9 +68,9 @@ class _LoginPageState extends State<LoginPage> {
             //   Icons.auto_stories,
             //   size: 150,color: Colors.white,
             // ),
-            SizedBox(height: 50),
+               SizedBox(height: 50),
             // welcome address
-            Row(
+               Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 const SizedBox(width: 20.0, height: 100.0),
@@ -88,6 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
+                        controller: _emailController,
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Email',
@@ -114,6 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
+                        controller: _passwordController,
                         obscureText: true,
                         decoration: InputDecoration(
                             border: InputBorder.none,
@@ -128,25 +148,28 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: 20,),
 
                 //sigin
-            Padding(
+               Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
-              child: Container(
-                padding: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(12)
-                ),
-
-                child: Center(
-                  child: Text("Sign In",
-                  style: GoogleFonts.bebasNeue(
-                    textStyle: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24,
-                      letterSpacing: 3,
-                    ),
+              child: GestureDetector(
+                onTap: signIn,
+                child: Container(
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(12)
                   ),
+
+                  child: Center(
+                    child: Text("Sign In",
+                    style: GoogleFonts.bebasNeue(
+                      textStyle: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24,
+                        letterSpacing: 3,
+                      ),
+                    ),
+                    ),
                   ),
                 ),
               ),
@@ -154,10 +177,10 @@ class _LoginPageState extends State<LoginPage> {
 
              SizedBox(height: 13,),
                 //register prompt
-            Row(
+               Row(
               mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
+               children: [
+                 Text(
                 "Not a member yet ?",
                 style: GoogleFonts.bebasNeue(
                   textStyle: TextStyle(
@@ -166,17 +189,20 @@ class _LoginPageState extends State<LoginPage> {
                   )
                 ),
               ),
-              SizedBox(width:5),
-              Text(
-                "REGISTER",
-                style: GoogleFonts.bebasNeue(
-                    textStyle: TextStyle(
-                      color: Colors.redAccent,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
-                ),
+               SizedBox(width:5),
+                GestureDetector(
+                  onTap: widget.showRegisterpage,
+                  child: Text(
+                  "REGISTER",
+                  style: GoogleFonts.bebasNeue(
+                      textStyle: TextStyle(
+                        color: Colors.redAccent,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                  ),
               ),
+                ),
             ],
             ),
 
