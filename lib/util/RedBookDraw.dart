@@ -13,7 +13,8 @@ class RedBookDraw extends StatelessWidget {
       child: ListView(
         children: [
           Redbookheader(
-            image: "https://media-exp1.licdn.com/dms/image/C4E03AQGb9fj3h6Ladg/profile-displayphoto-shrink_200_200/0/1662221411927?e=1668038400&v=beta&t=2sgn-TcK6sFs3dfUMmG-jF548w8qnaRxiTug8ejGNn0",
+            //image: "https://media-exp1.licdn.com/dms/image/C4E03AQGb9fj3h6Ladg/profile-displayphoto-shrink_200_200/0/1662221411927?e=1668038400&v=beta&t=2sgn-TcK6sFs3dfUMmG-jF548w8qnaRxiTug8ejGNn0",
+            image: "https://avatars.githubusercontent.com/u/54953858?v=4" ,
             name: "sai vishnu anudeep kadiyala",
             account: "AK7781",
             following: 1,
