@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:theredbookapp/screens/Profile.dart';
 
 class Drawing extends StatelessWidget {
 
@@ -12,19 +13,19 @@ class Drawing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-  children: [
-    Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: icon,
-    ),
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: icon,
+        ),
 
-    Expanded(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Text(label, style: GoogleFonts.roboto(textStyle: TextStyle(color: Colors.redAccent)),),
-      ),
-    ),
-  ],
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(label, style: GoogleFonts.roboto(textStyle: TextStyle(color: Colors.redAccent)),),
+          ),
+        ),
+      ],
     );
   }
 }

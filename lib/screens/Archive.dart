@@ -16,7 +16,7 @@ class _ArchiveState extends State<Archive> {
       child: Column(
         children:[
           PostWidget(
-              image:"https://upload.wikimedia.org/wikipedia/commons/d/d8/Person_icon_BLACK-01.svg",
+              image:"https://avatars.githubusercontent.com/u/54953858?v=4",
               name: "Danny",
               account:"DO2324",
               description: "fast pae work invirement",

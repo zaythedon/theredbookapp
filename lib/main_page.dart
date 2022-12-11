@@ -4,6 +4,9 @@ import 'package:theredbookapp/auth/Signup.dart';
 import 'package:theredbookapp/auth/login_page.dart';
 import 'package:theredbookapp/screens/HomePage.dart';
 import 'package:theredbookapp/screens/screen1.dart';
+import 'package:theredbookapp/screens/Profile.dart';
+
+
 
 class main_page extends StatefulWidget {
   const main_page({Key? key}) : super(key: key);
@@ -21,6 +24,7 @@ class _main_pageState extends State<main_page> {
         if(snapshot.hasData)
           {
             return Homepage();
+            // return ProfilePage();
           }
         else
           {

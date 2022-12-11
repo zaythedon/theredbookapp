@@ -7,6 +7,7 @@ import 'package:theredbookapp/screens/Archive.dart';
 import 'package:theredbookapp/screens/Redbook.dart';
 import 'package:theredbookapp/screens/Symposium.dart';
 import 'package:theredbookapp/util/RedBookDraw.dart';
+import 'package:theredbookapp/screens/Profile.dart';
 
 import '../util/Redbookheader.dart';
 

@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:theredbookapp/screens/Archive.dart';
+import 'package:theredbookapp/screens/Profile.dart';
 import 'package:theredbookapp/screens/Symposium.dart';
 import 'package:theredbookapp/util/Drawing.dart';
 import 'package:theredbookapp/util/Redbookheader.dart';
@@ -13,7 +15,8 @@ class RedBookDraw extends StatelessWidget {
       child: ListView(
         children: [
           Redbookheader(
-            image: "https://media-exp1.licdn.com/dms/image/C4E03AQGb9fj3h6Ladg/profile-displayphoto-shrink_200_200/0/1662221411927?e=1668038400&v=beta&t=2sgn-TcK6sFs3dfUMmG-jF548w8qnaRxiTug8ejGNn0",
+            //image: "https://media-exp1.licdn.com/dms/image/C4E03AQGb9fj3h6Ladg/profile-displayphoto-shrink_200_200/0/1662221411927?e=1668038400&v=beta&t=2sgn-TcK6sFs3dfUMmG-jF548w8qnaRxiTug8ejGNn0",
+            image: "https://avatars.githubusercontent.com/u/54953858?v=4" ,
             name: "sai vishnu anudeep kadiyala",
             account: "AK7781",
             following: 1,
@@ -22,7 +25,8 @@ class RedBookDraw extends StatelessWidget {
           Divider(),
 
           GestureDetector(
-            onTap: () => {FirebaseAuth.instance.signOut()},
+            onTap: () => {Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ProfilePage()))},
               child: Drawing(icon: Icon(Icons.account_circle), label: "Profile")
           ),
 
@@ -37,7 +41,11 @@ class RedBookDraw extends StatelessWidget {
             child:Drawing(icon: Icon(Icons.add_call), label: "Symposium"),
           ),
 
-          Drawing(icon: Icon(Icons.bookmark), label: "Archive"),
+        GestureDetector(
+          onTap: () => {Navigator.push(context,
+              MaterialPageRoute(builder: (context) => Archive()))},
+          child:Drawing(icon: Icon(Icons.bookmark), label: "Archive"),
+        ),
 
           Divider(),
 
