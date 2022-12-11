@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:theredbookapp/screens/Archive.dart';
 import 'package:theredbookapp/screens/Redbook.dart';
 import 'package:theredbookapp/screens/Symposium.dart';
 import 'package:theredbookapp/util/RedBookDraw.dart';
@@ -95,9 +96,14 @@ class _HomepageState extends State<Homepage> {
                 label: ""
             ),
             BottomNavigationBarItem(
-                icon: current==3? Icon(Icons.person, color: Colors.redAccent,):Icon(Icons.person),
-                label: "",
-
+                icon: current==3? GestureDetector(
+                  onTap:  () => {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => Archive()))},
+                  child: Icon(Icons.person, color: Colors.redAccent,),):GestureDetector(
+                  onTap:  () => {Archive()},
+                  child: Icon(Icons.person, color: Colors.black,),),
+                label: ""
             ),
           ],
         ),

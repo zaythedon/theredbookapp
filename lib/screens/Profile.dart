@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:theredbookapp/screens/EditProfile.dart';
+import 'package:theredbookapp/screens/HomePage.dart';
 import 'package:theredbookapp/screens/Redbook.dart';
 import 'package:theredbookapp/screens/Profile_CampusWidget.dart';
 import 'package:theredbookapp/util/TabBar_view_Redbook.dart';
@@ -25,13 +26,11 @@ class _ProfilePageState extends State<ProfilePage> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
-          leading: const BackButton(
-              color: Colors.black
-          ),
-
+          backgroundColor: Colors.redAccent,
           elevation: 1,
-
+          leading:IconButton(onPressed:() => {
+                                      Navigator.pushReplacement(context,
+                                       MaterialPageRoute(builder: (context) => Homepage()))}, icon: const Icon(Icons.arrow_back), tooltip: "back button")
         ),
 
         body: SingleChildScrollView(

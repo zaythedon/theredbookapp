@@ -23,8 +23,8 @@ class _main_pageState extends State<main_page> {
       builder: (context, snapshot) {
         if(snapshot.hasData)
           {
-            // return Homepage();
-            return ProfilePage();
+            return Homepage();
+            // return ProfilePage();
           }
         else
           {

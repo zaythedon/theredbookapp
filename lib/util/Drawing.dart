@@ -12,23 +12,20 @@ class Drawing extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => { Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context ) => ProfilePage()))},
-      //onTap: () => { FirebaseAuth.instance.signOut()},
-      child: Row(
-        children: [
-      Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: icon,
-      ),
+    return Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: icon,
+        ),
 
-    Expanded(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Text(label, style: GoogleFonts.roboto(textStyle: TextStyle(color: Colors.redAccent)),),
-      ),
-    ),
-  ],
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(label, style: GoogleFonts.roboto(textStyle: TextStyle(color: Colors.redAccent)),),
+          ),
+        ),
+      ],
     );
   }
 }
