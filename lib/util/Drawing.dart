@@ -22,14 +22,13 @@ class Drawing extends StatelessWidget {
         child: icon,
       ),
 
-      Expanded(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(label, style: GoogleFonts.roboto(textStyle: TextStyle(color: Colors.redAccent)),),
-        ),
+    Expanded(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(label, style: GoogleFonts.roboto(textStyle: TextStyle(color: Colors.redAccent)),),
       ),
+    ),
   ],
-      ),
     );
   }
 }
