@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:theredbookapp/screens/Archive.dart';
+import 'package:theredbookapp/screens/Campus.dart';
 import 'package:theredbookapp/screens/Profile.dart';
 import 'package:theredbookapp/screens/Symposium.dart';
 import 'package:theredbookapp/util/Drawing.dart';
@@ -31,7 +32,8 @@ class RedBookDraw extends StatelessWidget {
           ),
 
            GestureDetector(
-            onTap: () => {FirebaseAuth.instance.signOut()},
+            onTap: () => {Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Campus()))},
             child:Drawing(icon: Icon(Icons.style), label: "Campus"),
           ),
 
