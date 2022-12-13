@@ -20,7 +20,7 @@ class _CampusState extends State<Campus> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 2,
-        title: Text("Archive", style: GoogleFonts.bebasNeue(textStyle: TextStyle(fontSize: 40, color: Colors.redAccent)),),
+        title: Text("Campus", style: GoogleFonts.bebasNeue(textStyle: TextStyle(fontSize: 40, color: Colors.redAccent)),),
         leading: Builder(
           builder: (BuildContext context) {
             return GestureDetector(
