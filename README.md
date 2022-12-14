@@ -12,7 +12,7 @@ The red book for anemoia studios
 7. try logging in with the test email id : anemoiastudios@gmail.com and passcode: Anemoia@1 -- sometimes might need access of sponsor. 
 8. And you should be good to play around the app and browse through.
 
-** current backend is disable due to sponsor decision and only has the manually added mock data.
+* current backend is disable due to sponsor decision and only has the manually added mock data.
 
 ## For forth coming contributors:  
 1. flutter tutorial : <a href = "https://www.youtube.com/watch?v=1ukSR1GRtMU"> checkout this</a>
