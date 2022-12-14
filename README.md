@@ -2,7 +2,7 @@
 
 The red book for anemoia studios
 
-##Getting started 
+## Getting started 
 1. make sure you have flutter, dart android studio/vscode installed [pre requisite].
 2. run "flutter doctor" to make sure flutter is all good and ready to run
 3. install an emulator of your choice and make sure you have android SDK set for 33 + / Ios 15 + to run it smoothly.
