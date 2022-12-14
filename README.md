@@ -33,7 +33,7 @@ The red book for anemoia studios
 please refer to firebase console: https://console.firebase.google.com/project/theredbookapp/overview [* anemoia studios purposes not affiliated to any contributor]
   
   * Do checkout the licensing of the project by MIT licensing: <a href ="https://github.com/anemoiastudios/theredbookapp/blob/main/LICENSE"> HERE</a>
-
+---
 Thanks to Hassib, cynthia and danny for their contributions to this project.
 
 special thanks to Beja christmas and Pradeep atreya for their continous support.
