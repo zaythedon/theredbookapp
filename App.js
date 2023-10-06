@@ -1,16 +1,21 @@
+// React and Expo Realted Imports
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// Application Related Imports
+import { styles as styles} from './styles.js';
+import { CampusHome as CampusHome} from './CampusFeature/HomeScreen.js';
 
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
         <Text>Open up App.js to start working on your app!</Text>
         <Button
-          title="Press me"
-          onPress={() => navigation.navigate('Details')}
+          title="Go To Campus Feature"
+          onPress={() => navigation.navigate('CampusHome')}
         />
         <StatusBar style="auto" />
       </View>
@@ -29,24 +34,18 @@ function DetailsScreen({ navigation }) {
   );
 }
 
-const Stack = createNativeStackNavigator();
+export const navStack = createNativeStackNavigator();
 
 export default function App() {
-  return (
+  return (  // Build the stack of possible screens to navigate to from here.
     <NavigationContainer>{
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
-      </Stack.Navigator>
+      <navStack.Navigator>
+        <navStack.Screen name="Home" component={HomeScreen} />
+        <navStack.Screen name="Details" component={DetailsScreen} />
+        <navStack.Screen name="CampusHome" component={CampusHome} />
+      </navStack.Navigator>
     }</NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
