@@ -6,7 +6,9 @@ export class User{
     #handle;
     #birthday;
     #employer;
+    
 
+    // Constructor. To build user, use buildUser() instead.
     constructor(name, UUID, handle, birthday, employer){
         this.#posts = [];
         this.#name = name;
@@ -16,7 +18,7 @@ export class User{
         this.#employer = employer;
     }
 
-    // Get Methods
+    //vvvvvvvvvvvvv Get Methods vvvvvvvvvvvvv
 
     getName(){
         return this.#name;
@@ -42,7 +44,9 @@ export class User{
         return this.#posts;
     }
 
-    // Set Methods
+    //^^^^^^^^^^^^^ Get Methods ^^^^^^^^^^^^^
+
+    //vvvvvvvvvvvvv Set Methods vvvvvvvvvvvvv
 
     setName(name){
         this.#name = name;
@@ -68,13 +72,34 @@ export class User{
         return this.#posts;
     }
 
+    //^^^^^^^^^^^^^ Set Methods ^^^^^^^^^^^^^
+
+    //vvvvvvvvvvvvv Database Queries vvvvvvvvvvvvv
+
+    // Update the User
+    updateUser(){
+        // Query the database and update the user's data based on UUID.
+        // Return false if query failed. Return true is succeeded
+        return true;
+    }
+
+    // Add a User to the database
+    static addUser(){
+        // Query the database and add user
+        // Return false if failed. Return true is succeeded
+        return true;
+    }
+
 
     // To be implimented once data structure is confirmed
     static buildUser(data){
         let d = data;
+        // Query the database and build user object
+        // Return User Object if succeeded
+        return this.buildTestUser;
     }
 
-    // Test static function
+    // Test static function //Delete by final implimentation
     static buildTestUser(){
         return new this("Billy", "00001", "@barryb", Date.now().toString(), "Anemoia Studios");
     }
