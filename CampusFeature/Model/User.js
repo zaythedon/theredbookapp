@@ -1,7 +1,8 @@
 export class User{
     
     #posts; //List of posts associated with this user
-    #name;
+    #firstname;
+    #lastname;
     #uuid;
     #handle;
     #birthday;
@@ -9,9 +10,10 @@ export class User{
     
 
     // Constructor. To build user, use buildUser() instead.
-    constructor(name, UUID, handle, birthday, employer){
+    constructor(firstname, lastname, UUID, handle, birthday, employer){
         this.#posts = [];
-        this.#name = name;
+        this.#firstname = firstname;
+        this.#lastname = lastname;
         this.#uuid = UUID;
         this.#handle = handle;
         this.#birthday = birthday;
@@ -20,8 +22,12 @@ export class User{
 
     //vvvvvvvvvvvvv Get Methods vvvvvvvvvvvvv
 
-    getName(){
-        return this.#name;
+    getFirstName(){
+        return this.#firstname;
+    }
+
+    getLastName(){
+        return this.#lastname;
     }
 
     getUUID(){
@@ -48,8 +54,12 @@ export class User{
 
     //vvvvvvvvvvvvv Set Methods vvvvvvvvvvvvv
 
-    setName(name){
-        this.#name = name;
+    setFirstName(name){
+        this.#firstname = name;
+    }
+
+    setLastName(name){
+        this.#lastname = name;
     }
 
     setUUID(uuid){
