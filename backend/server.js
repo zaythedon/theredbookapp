@@ -7,12 +7,20 @@ const cors = require("cors");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const userRoutes = require("./routes/user");
+const postRoutes = require("./routes/posts");
+const commentRoutes = require("./routes/comments");
+const likeRoutes = require("./routes/likes");
+const followerRoutes = require("./routes/followers");
 
 app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 app.use(helmet());
 app.use("/users", userRoutes);
+app.use("/posts", postRoutes);
+app.use("/comments", commentRoutes);
+app.use("/likes", likeRoutes);
+app.use("/followers", followerRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");

@@ -13,4 +13,5 @@ Make sure you create a .env file inside the 'backend' directory. It should have 
 - DB_PASSWORD - Whatever password that the user of the database is using.
 - PORT - Any open port. You can use these to make api calls.
 
+Backend Folder
 npm install express mysql2 dotenv cors morgan helmet
