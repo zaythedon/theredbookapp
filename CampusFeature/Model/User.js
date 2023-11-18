@@ -1,3 +1,5 @@
+import { Post as PostModelObject } from './Post.js';
+
 export class User{
     
     #posts; //List of posts associated with this user
@@ -18,6 +20,11 @@ export class User{
         this.#handle = handle;
         this.#birthday = birthday;
         this.#employer = employer;
+    }
+
+
+    GetPosts(amount){
+        return PostModelObject.GetPostsFromUser(this.#uuid, amount);
     }
 
     //vvvvvvvvvvvvv Get Methods vvvvvvvvvvvvv
@@ -100,6 +107,18 @@ export class User{
         return true;
     }
 
+    static GetUserFormDB(uuid){
+        // Query the database for user by UUID;
+        
+        querySuccess = false; // Query changes this to true if it is successful
+
+        if (querySuccess){
+            return this.buildUser(data)
+        }
+        else{
+            return this.buildTestUser;
+        }
+    }
 
     // To be implimented once data structure is confirmed
     static buildUser(data){

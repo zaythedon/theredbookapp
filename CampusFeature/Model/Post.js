@@ -1,3 +1,5 @@
+import { User as UserModelObject } from './User.js';
+
 export class Post{
 
     #User;
@@ -15,10 +17,27 @@ export class Post{
         this.#User = userID;
     }
 
+    getUserFromPost(){
+        return new UserModelObject
+    }
+
+    static GetPostsFromUser(userID, amount){
+        
+        // Query DB Here and return top amount-number of postIDs
+        postIDs = []
+
+        UserPosts = [];
+        // Add to list of Posts
+        for (i = 0; i < postIDs; i++){
+            UserPosts.push(this.GetPostFromDB(userID, postIDs[i]));
+        }
+
+        return UserPosts;
+    }
 
     //vvvvv Build Post from Database vvvvv
 
-    GetPostFromDB(userID, postID){
+    static GetPostFromDB(userID, postID){
         // How to build a post from the DB using a given user and postID
         tempPost = new this(userID);    // Sets User
         tempPost.SetPostID(postID);          // Sets PostID
@@ -28,6 +47,7 @@ export class Post{
 
         return tempPost;    // Return Post Object
     }
+
     
     GetContentFromDB(userID, postID){
         // How to build content objects from the DB using userID and this.postID
@@ -74,7 +94,7 @@ export class Post{
     
     //vvvvv New Post (not from database) vvvvv
 
-    BuildNewPost(userID){
+    static BuildNewPost(userID){
         tempPost = new this(userID);            // Sets User
         tempPost.SetPostID(this.#GetPostID());  // Sets PostID
         
@@ -83,7 +103,7 @@ export class Post{
         return tempPost;    // Return Post Object
     }
 
-    #GetPostID(){
+    static #GetPostID(){
         //Return a new valid unique post identifier.
         // (A PostID that is not already in use.)
     }
