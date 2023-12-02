@@ -53,10 +53,6 @@ export class User{
         return this.#employer;
     }
 
-    getPosts(){
-        return this.#posts;
-    }
-
     //^^^^^^^^^^^^^ Get Methods ^^^^^^^^^^^^^
 
     //vvvvvvvvvvvvv Set Methods vvvvvvvvvvvvv
@@ -85,10 +81,6 @@ export class User{
         this.#employer = employer;
     }
 
-    setPosts(){
-        return this.#posts;
-    }
-
     //^^^^^^^^^^^^^ Set Methods ^^^^^^^^^^^^^
 
     //vvvvvvvvvvvvv Database Queries vvvvvvvvvvvvv
@@ -101,7 +93,7 @@ export class User{
     }
 
     // Add a User to the database
-    static addUser(){
+    addUser(){
         // Query the database and add user
         // Return false if failed. Return true is succeeded
         return true;
@@ -113,10 +105,10 @@ export class User{
         querySuccess = false; // Query changes this to true if it is successful
 
         if (querySuccess){
-            return this.buildUser(data)
+            return this.buildUser(data);
         }
         else{
-            return this.buildTestUser;
+            return null;
         }
     }
 

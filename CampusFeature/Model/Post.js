@@ -18,7 +18,7 @@ export class Post{
     }
 
     getUserFromPost(){
-        return new UserModelObject
+        return UserModelObject.GetUserFormDB(this.#User)
     }
 
     static GetPostsFromUser(userID, amount){
@@ -28,7 +28,7 @@ export class Post{
 
         UserPosts = [];
         // Add to list of Posts
-        for (i = 0; i < postIDs; i++){
+        for (i = 0; i < postIDs.length; i++){
             UserPosts.push(this.GetPostFromDB(userID, postIDs[i]));
         }
 
