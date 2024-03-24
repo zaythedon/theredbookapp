@@ -1,0 +1,48 @@
+import { View, Text, Image } from "react-native";
+
+const Notifications = () => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.notificationsContainer}>
+        <Image
+          style={styles.bellIcon}
+          source={require("../assets/bell-icon.png")}
+        />
+        <Text style={styles.text}>Notifications</Text>
+      </View>
+      <Text style={styles.notificationText}> No new notifications</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#fafafa",
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  notificationsContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  text: {
+    fontSize: 24,
+    fontWeight: "bold",
+    justifyContent: "center",
+    marginLeft: 10,
+  },
+  notificationText: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginTop: 20,
+  },
+  bellIcon: {
+    width: 24,
+    height: 24,
+    resizeMode: "contain",
+    marginLeft: 10,
+  },
+});
+
+export default Notifications;
