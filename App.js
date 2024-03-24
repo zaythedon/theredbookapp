@@ -1,22 +1,21 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import Navigation from "./navigator/Navigation";
 import { NavigationContainer } from "@react-navigation/native";
-
 import TabNavigator from "./navigator/TabNavigator";
+
 export default function App() {
   return (
-    <NavigationContainer>
-      <TabNavigator />
-    </NavigationContainer>
+    <SafeAreaView style={styles.root}>
+      <Navigation />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  root: {
     flex: 1,
-    backgroundColor: "#fafafa",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "#f9fbfc",
   },
   tabBar: {
     backgroundColor: "#6bc2be",
